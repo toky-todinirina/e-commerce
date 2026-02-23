@@ -1,0 +1,56 @@
+@use "./variables" as vars;
+
+.checkout {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+
+  &__title {
+    font-size: 2rem;
+    color: vars.$text;
+  }
+
+  &__grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input {
+      padding: 0.7rem;
+      border-radius: vars.$radius;
+      border: 1px solid vars.$border;
+      font-size: 0.95rem;
+
+      &:focus {
+        outline: none;
+        border-color: vars.$primary;
+      }
+    }
+  }
+
+  &__summary {
+    border: 1px solid vars.$border;
+    border-radius: vars.$radius;
+    padding: 1.5rem;
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__empty {
+    padding: 2rem;
+    text-align: center;
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,51 @@
+@use "./variables" as vars;
+
+.cart-btn {
+  padding: 0.65rem 1.4rem;
+  border-radius: vars.$radius;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform vars.$transition, box-shadow vars.$transition, background vars.$transition;
+
+  &--primary {
+    background: linear-gradient(135deg, vars.$primary, vars.$secondary);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+
+  &--secondary {
+    background: vars.$danger;
+    border: 1px solid vars.$border;
+    color: vars.$text;
+
+    &:hover {
+      background: vars.$primary;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &--success {
+    background: vars.$success;
+    color: white;
+
+    &:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+  }
+}

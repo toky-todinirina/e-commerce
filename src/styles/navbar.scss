@@ -1,0 +1,48 @@
+@use "./variables" as vars;
+
+.navbar {
+  background: vars.$primary;
+  border-bottom: 1px solid vars.$border;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: vars.$bg;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      font-weight: 500;
+      color:vars.$bg;
+      &:hover {
+        color: vars.$secondary;
+      }
+    }
+  }
+}
+.cart-link {
+  position: relative;
+
+  .cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: vars.$accent;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
